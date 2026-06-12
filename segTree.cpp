@@ -52,13 +52,16 @@ int main() {
     }
 
     // making n a power of 2
-    int sz = 1;
+    int sz = 1, N = n;
     while (sz < n) sz <<= 1;
     n = sz;
 
     // building the tree
     for (int i = 0; i < n; i++) {
-        tree[n + i] = v[i];
+        if (n < N)
+            tree[n + i] = v[i];
+        else
+            tree[n + i] = 0;
     }
 
     for (int i = n - 1; i >= 1; i--) {
