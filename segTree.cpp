@@ -58,7 +58,7 @@ int main() {
 
     // building the tree
     for (int i = 0; i < n; i++) {
-        if (n < N)
+        if (i < N)
             tree[n + i] = v[i];
         else
             tree[n + i] = 0;
